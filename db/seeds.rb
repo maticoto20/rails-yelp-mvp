@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+categories = ["chinese", "italian", "japanese", "french", "belgian"]
+5.times do |index|
+  Restaurant.new(name: "resto#{index + 1}", address: "callefalsa#{index + 1}", category: categories.sample).save
+end
